@@ -12,31 +12,31 @@ export default function Controller() {
             <Text style={styles.speedTitle}>Speed</Text>
             <Text style={styles.setSpeed}>Set speed:</Text>
             <View style={styles.sliderView}>
-                <Slider style={styles.slider} value={speed} minimumValue={200} maximumValue={1300} step={50} maximumTrackTintColor={'#B90E0A'}
-                    minimumTrackTintColor={'orange'} thumbTintColor={'yellow'} onValueChange={(value) => {
+                <Slider style={styles.slider} value={speed} minimumValue={200} maximumValue={1300} step={50} maximumTrackTintColor={'#90EE90'}
+                    minimumTrackTintColor={'#006400'} thumbTintColor={'yellow'} onValueChange={(value) => {
                         setSpeed(value);
                     }} />
-                <Text style={styles.currentSpeed}>Current Speed {speed}</Text>
+                <Text style={styles.currentSpeed}>Current Speed: {speed} degrees/second</Text>
             </View>
 
             <Text style={styles.navTitle}>Navigation</Text>
             <View style={styles.navigation}>
                 <View style={styles.top}>
-                    <FontAwesome.Button style={styles.arrowButtons} name="arrow-up" backgroundColor={'#FC4C4E'} size={70} color={'black'} onPress={() => { console.log("Pressed!") }}>
+                    <FontAwesome.Button name="arrow-up" backgroundColor={'#4CBB17'} size={69} color={'black'} onPress={() => { console.log("Pressed!") }}>
                     </FontAwesome.Button>
                 </View>
                 <View style={styles.middleButtons}>
                     <View style={styles.right}>
-                        <FontAwesome.Button style={styles.arrowButtons} name="arrow-right" backgroundColor={'#FC4C4E'} size={70} color={'black'} onPress={() => { console.log("Pressed!") }}>
+                        <FontAwesome.Button name="arrow-right" backgroundColor={'#4CBB17'} size={70} color={'black'} onPress={() => { console.log("Pressed!") }}>
                         </FontAwesome.Button>
                     </View>
-                    <View>
-                        <FontAwesome.Button style={styles.arrowButtons} name="arrow-left" backgroundColor={'#FC4C4E'} size={70} color={'black'} onPress={() => { console.log("Pressed!") }}>
+                    <View style={styles.left}>
+                        <FontAwesome.Button name="arrow-left" backgroundColor={'#4CBB17'} size={70} color={'black'} onPress={() => { console.log("Pressed!") }}>
                         </FontAwesome.Button>
                     </View>
                 </View>
                 <View style={styles.bottom}>
-                    <FontAwesome.Button style={styles.arrowButtons} name="arrow-down" backgroundColor={'#FC4C4E'} size={70} color={'black'} onPress={() => { console.log("Pressed!") }}>
+                    <FontAwesome.Button name="arrow-down" backgroundColor={'#4CBB17'} size={69} color={'black'} onPress={() => { console.log("Pressed!") }}>
                     </FontAwesome.Button>
                 </View>
             </View>
@@ -49,7 +49,7 @@ export default function Controller() {
 const styles = StyleSheet.create({
 
     container: {
-        backgroundColor: '#FC4C4E',
+        backgroundColor: '#4CBB17',
         width: '100%',
         marginTop: '20%',
         height: '100%'
@@ -60,32 +60,24 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     setSpeed: {
-        fontSize: 20,
+        fontSize: 24,
         paddingLeft: 10
     },
     slider: {
         backgroundColor: 'yellow',
-        margin: 10,
     },
     sliderView: {
-        padding: 20,
+        paddingHorizontal: 20,
 
     },
     currentSpeed: {
         fontWeight: 'bold',
-        fontSize: 15
+        fontSize: 20,
+        marginBottom: 5
     },
     navTitle: {
         textAlign: 'center',
         fontSize: 30
-    },
-    arrowButtons: {
-        backgroundColor: 'yellow',
-        justifyContent: 'center',
-        width: 100,
-        height: 100,
-        borderRadius: 50,
-        alignItems: 'center',
     },
     arrowButtonsContainer: {
         marginTop: 40,
@@ -93,25 +85,27 @@ const styles = StyleSheet.create({
     middleButtons: {
         flexDirection: 'row-reverse',
         justifyContent: 'center',
-        paddingHorizontal: 100
-    },
-    leftArrow: {
-
-    },
-    rightArrow: {
-
+        alignItems: 'center',
+        paddingHorizontal: '30%'
     },
     top: {
-        paddingHorizontal: '37.8%'
+        marginHorizontal: '38%',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     right: {
-        paddingLeft: '45%'
+        width:'100%'
+    },
+    left:{
+        width:'100%'
     },
     bottom: {
-        paddingHorizontal: '37.8%'
+        marginHorizontal: '38%'
     },
     navigation: {
-        marginTop: 20
+        marginTop: 20,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 
 });
