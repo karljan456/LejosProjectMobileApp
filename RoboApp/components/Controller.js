@@ -1,11 +1,11 @@
-import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity } from 'react-native';
 import { Slider } from '@miblanchard/react-native-slider';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useState } from 'react';
 
 export default function Controller() {
 
-    const [speed, setSpeed] = useState(200)
+    const [speed, setSpeed] = useState(200);
 
     return (
         <View style={styles.container}>
@@ -40,6 +40,17 @@ export default function Controller() {
                     </FontAwesome.Button>
                 </View>
             </View>
+            <View style={styles.buttonsRowOne}>
+                <TouchableOpacity ></TouchableOpacity>
+                <View style={styles.button}><Button title='Lights' color="#013220">Lights</Button></View>
+                <View style={styles.button}><Button title='Pause' color={'#228C22'}>Pause</Button></View>
+                <View style={styles.button}><Button title='Music' color={'#90EE90'}>Music</Button></View>
+            </View>
+            <View style={styles.buttonsRowTwo}>
+                <View style={styles.button}><Button title='Dance' color={'#8FD400'}>Dance</Button></View>
+                <View style={styles.button}><Button title='Continue' color={'#355E3B'}>Continue</Button></View>
+                <View style={styles.button}><Button title='Stop' color={'#808000'}>Stop</Button></View>
+            </View>
         </View>
     )
 
@@ -49,7 +60,6 @@ export default function Controller() {
 const styles = StyleSheet.create({
 
     container: {
-        backgroundColor: '#4CBB17',
         width: '100%',
         marginTop: '20%',
         height: '100%'
@@ -57,11 +67,11 @@ const styles = StyleSheet.create({
     speedTitle: {
         fontSize: 30,
         fontWeight: 'bold',
-        textAlign: 'center'
+        textAlign: 'center',
     },
     setSpeed: {
         fontSize: 24,
-        paddingLeft: 10
+        paddingLeft: 10,
     },
     slider: {
         backgroundColor: 'yellow',
@@ -77,7 +87,8 @@ const styles = StyleSheet.create({
     },
     navTitle: {
         textAlign: 'center',
-        fontSize: 30
+        fontSize: 30,
+        fontWeight: 'bold'
     },
     arrowButtonsContainer: {
         marginTop: 40,
@@ -105,7 +116,22 @@ const styles = StyleSheet.create({
     navigation: {
         marginTop: 20,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 20
+    },
+    buttonsRowOne:{
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        marginBottom: 20
+    },
+    buttonsRowTwo:{
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        marginLeft: 20
+    },
+    button:{
+        width: 100,
+        height: 50
     }
 
 });

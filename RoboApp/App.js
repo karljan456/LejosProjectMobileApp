@@ -1,8 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Controller from './components/Controller';
 
 export default function App() {
+
   return (
     <View style={styles.container}>
       <Controller />
@@ -12,9 +12,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#fff',
+    backgroundColor: '#4CBB17',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
+    height:'100%'
   },
 });
