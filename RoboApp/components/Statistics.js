@@ -1,14 +1,17 @@
 import { View, Text } from "react-native";
 import { StyleSheet } from "react-native";
 import Chart from "./Chart";
+import { useGetObstacle } from "../hooks/useGetObstacle";
 
 export default function Statistics() {
+
+    const data = useGetObstacle("../rest/robot/getobstacles")
 
     return (
         <View style={styles.statisctics}>
             <Text style={styles.title} >Statistics</Text>
             <Text style={styles.obstacle}>Obstacle Detection</Text>
-            <Text style={styles.obstacleData}>Obstacles detected last time: 5 times</Text>
+            <Text style={styles.obstacleData}>Obstacles detected last time: {data} times</Text>
                 <Chart />
         </View>
     )

@@ -4,6 +4,7 @@ import SwitchSelector from 'react-native-switch-selector'
 import Statistics from './Statistics';
 import { useState } from "react";
 
+
 export default function Selector() {
 
     const options = [{ label: "Controller", value: "Controller" }, { label: "Statistics", value: "Statistics" }]
