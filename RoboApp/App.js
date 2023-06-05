@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
-import Controller from './components/Controller';
+import Selector from './components/Selector';
 
 export default function App() {
 
   return (
     <View style={styles.container}>
-      <Controller />
+      <Selector />
     </View>
   );
 }
@@ -13,9 +13,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#4CBB17',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    height:'100%'
+    height:'100%',
+    width: '100%',
   },
 });
