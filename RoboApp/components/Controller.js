@@ -2,13 +2,25 @@ import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity } from 'rea
 import { Slider } from '@miblanchard/react-native-slider';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { useState } from 'react';
+import SwitchSelector from 'react-native-switch-selector'
 
 export default function Controller() {
 
     const [speed, setSpeed] = useState(200);
 
+    const options = [{ label: "Controller", value: "Controller" }, { label: "Statistics", value: "Statistics" }]
+
     return (
         <View style={styles.container}>
+            <View style={styles.selector}>
+                <SwitchSelector
+                    options={options}
+                    initial={0}
+                    buttonColor={'#228C22'}
+                    hasPadding
+                    onPress={value => console.log(`Call onPress with value: ${value}`)}
+                />
+            </View>
             <Text style={styles.speedTitle}>Speed</Text>
             <Text style={styles.setSpeed}>Set speed:</Text>
             <View style={styles.sliderView}>
@@ -55,7 +67,6 @@ export default function Controller() {
     )
 
 }
-
 
 const styles = StyleSheet.create({
 
@@ -105,10 +116,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     right: {
-        width:'100%'
+        width: '100%'
     },
-    left:{
-        width:'100%'
+    left: {
+        width: '100%'
     },
     bottom: {
         marginHorizontal: '38%'
@@ -119,19 +130,22 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 20
     },
-    buttonsRowOne:{
+    buttonsRowOne: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         marginBottom: 20
     },
-    buttonsRowTwo:{
+    buttonsRowTwo: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         marginLeft: 20
     },
-    button:{
+    button: {
         width: 100,
         height: 50
+    },
+    selector:{
+        marginVertical: 20
     }
 
 });
