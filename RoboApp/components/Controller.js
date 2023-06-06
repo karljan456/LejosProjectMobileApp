@@ -19,9 +19,7 @@ export default function Controller() {
             <Text style={styles.speedTitle}>Speed</Text>
             <Text style={styles.setSpeed}>Set speed:</Text>
             <View style={styles.sliderView}>
-                <Slider onSlidingComplete={() => {
-
-                }} style={styles.slider} value={speed} minimumValue={200} maximumValue={1300} step={50} maximumTrackTintColor={'#90EE90'}
+                <Slider style={styles.slider} value={speed} minimumValue={200} maximumValue={1300} step={50} maximumTrackTintColor={'#90EE90'}
                     minimumTrackTintColor={'#006400'} thumbTintColor={'yellow'} onValueChange={(value) => {
 
                         setSpeed(value);
