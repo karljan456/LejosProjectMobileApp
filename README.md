@@ -1,5 +1,5 @@
 # LejosProjectMobileApp
-## This project is continuation of the university project of building webservices and in this version it is designed as a mobile app
+## This project is continuation of the university project of building Restful webservices and in this version it is designed as a mobile app
 The app is developed with React Native framework, it consisits of 
 
 1. Slider to change the current speed (from 200 degrees per second to 1300),
