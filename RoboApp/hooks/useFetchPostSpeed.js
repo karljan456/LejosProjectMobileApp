@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
-
 export const useFetchPostSpeed = ({url, value, method = "POST"}) => {
 
     useEffect(() => {
+        
         const xmlhttp = new XMLHttpRequest();
 
         const data = "speed=" + value;

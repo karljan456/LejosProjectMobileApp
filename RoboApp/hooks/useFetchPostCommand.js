@@ -1,9 +1,9 @@
 import { useEffect } from "react"
 
-
-export const useFetchPostCommand = ({url, command, method='POST'}) =>{
+export const useFetchPostCommand = ({ url, command, method = 'POST' }) => {
 
     useEffect(() => {
+
         const xmlhttp = new XMLHttpRequest();
 
         const data = "command=" + command;
@@ -20,7 +20,7 @@ export const useFetchPostCommand = ({url, command, method='POST'}) =>{
 
             }
         };
-        
+
         xmlhttp.send(data);
 
         return () => {

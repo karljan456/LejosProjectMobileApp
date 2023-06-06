@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Selector from './components/Selector';
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#4CBB17',
-    height:'100%',
+    height: '100%',
     width: '100%',
   },
 });

@@ -12,7 +12,7 @@ export default function Statistics() {
             <Text style={styles.title} >Statistics</Text>
             <Text style={styles.obstacle}>Obstacle Detection</Text>
             <Text style={styles.obstacleData}>Obstacles detected last time: {data} times</Text>
-                <Chart />
+            <Chart />
         </View>
     )
 
@@ -20,21 +20,21 @@ export default function Statistics() {
 
 
 const styles = StyleSheet.create({
-    statisctics:{
-        height:'100%',
+    statisctics: {
+        height: '100%',
         width: '100%',
         marginTop: 10
     },
-    title:{
-        textAlign:'center',
+    title: {
+        textAlign: 'center',
         fontSize: 30,
-        fontWeight:'bold',
+        fontWeight: 'bold',
     },
-    obstacle:{
+    obstacle: {
         marginLeft: 20,
         fontSize: 25
     },
-    obstacleData:{
+    obstacleData: {
         marginLeft: 20,
         fontSize: 20,
         fontWeight: 'bold'

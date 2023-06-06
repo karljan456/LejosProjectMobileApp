@@ -4,7 +4,6 @@ import SwitchSelector from 'react-native-switch-selector'
 import Statistics from './Statistics';
 import { useEffect, useState } from "react";
 
-
 export default function Selector() {
 
     const options = [{ label: "Controller", value: "Controller" }, { label: "Statistics", value: "Statistics" }]
@@ -12,23 +11,23 @@ export default function Selector() {
     const [selectedTab, setSelectedTab] = useState('Controller');
 
 
-    useEffect(()=>{
+    useEffect(() => {
 
         loadSelectedTab();
 
     }, []);
 
     const loadSelectedTab = () => {
-        
+
         switch (selectedTab) {
 
             case 'Controller':
 
-                return <Controller/>
+                return <Controller />
 
             case 'Statistics':
 
-                return <Statistics/>
+                return <Statistics />
 
         }
     }
