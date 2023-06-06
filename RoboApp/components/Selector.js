@@ -2,16 +2,23 @@ import { StyleSheet, View } from "react-native";
 import Controller from "./Controller";
 import SwitchSelector from 'react-native-switch-selector'
 import Statistics from './Statistics';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Selector() {
 
     const options = [{ label: "Controller", value: "Controller" }, { label: "Statistics", value: "Statistics" }]
 
-    const [selectedTab, setSelectedTab] = useState(<Controller />);
+    const [selectedTab, setSelectedTab] = useState('Controller');
 
-    const SelectedTab = () => {
+
+    useEffect(()=>{
+
+        loadSelectedTab();
+
+    }, []);
+
+    const loadSelectedTab = () => {
         
         switch (selectedTab) {
 
@@ -37,7 +44,7 @@ export default function Selector() {
                     setSelectedTab(value);
                 }}
             />
-            {SelectedTab()}
+            {loadSelectedTab()}
         </View>
 
     );
