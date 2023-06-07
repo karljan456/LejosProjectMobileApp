@@ -7,6 +7,8 @@ The app is developed with React Native framework, it consisits of
 3. Control Buttons: Stop the Program, Flash lights, Dance, Play random music, Pause the Program, Continue the Program.
 4. Statistics (how many times was the obstacle detected)
 
+## App Screenshots
+
 <p align="center">
   <img align="left" src="RoboApp/assets/Controller.png" width=30% height=30%>
   <img src="RoboApp/assets/Statistics.png" width=30% height=30%>
