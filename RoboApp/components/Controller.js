@@ -32,26 +32,27 @@ export default function Controller() {
             <View style={{ flex: 5 }}><Text style={styles.navTitle}>Navigation</Text>
                 <View style={styles.navigation}>
                     <View style={styles.top}>
-                        <FontAwesome.Button name="arrow-up" backgroundColor={'#4CBB17'} size={69} color={'black'} onPress={() => { setCommand(3) }}>
+                        <FontAwesome.Button name="arrow-up" backgroundColor={'#4CBB17'} size={70} color={'black'} onPress={() => { setCommand(3) }}>
                         </FontAwesome.Button>
                     </View>
                     <View style={styles.middleButtons}>
-                        <View style={styles.right}>
+                        <View>
                             <FontAwesome.Button name="arrow-right" backgroundColor={'#4CBB17'} size={70} color={'black'} onPress={() => { setCommand(4) }}>
                             </FontAwesome.Button>
                         </View>
-                        <View style={styles.left}>
+                        <View style={{ width: "30%" }}></View>
+                        <View>
                             <FontAwesome.Button name="arrow-left" backgroundColor={'#4CBB17'} size={70} color={'black'} onPress={() => { setCommand(2) }}>
                             </FontAwesome.Button>
                         </View>
                     </View>
                     <View style={styles.bottom}>
-                        <FontAwesome.Button name="arrow-down" backgroundColor={'#4CBB17'} size={69} color={'black'} onPress={() => { setCommand(5) }}>
+                        <FontAwesome.Button name="arrow-down" backgroundColor={'#4CBB17'} size={70} color={'black'} onPress={() => { setCommand(5) }}>
                         </FontAwesome.Button>
                     </View>
                 </View>
             </View>
-            <EffectButtons style={{flex:1.5}} />
+            <EffectButtons style={{ flex: 1.5 }} />
         </View>
     )
 
@@ -91,18 +92,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row-reverse',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingHorizontal: '30%'
+        paddingHorizontal: '20%'
     },
     top: {
         marginHorizontal: '38%',
         justifyContent: 'center',
         alignItems: 'center',
-    },
-    right: {
-        width: '100%'
-    },
-    left: {
-        width: '100%'
     },
     bottom: {
         marginHorizontal: '38%',

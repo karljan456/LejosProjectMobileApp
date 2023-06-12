@@ -1,7 +1,6 @@
 {
   "expo": {
     "name": "RoboApp",
-    "slug": "roboapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,16 +20,23 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#2DD63E"
-      }
+      },
+      "package": "com.edv11n.roboapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "76fb5302-1409-4132-bb1e-113e2b3b97ad"
+        "projectId": "9d7c7d62-54ea-4524-8c30-5ac67b66fcf2"
       }
     },
-    "owner": "edv11n"
+    "owner": "edv11n",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/9d7c7d62-54ea-4524-8c30-5ac67b66fcf2"
+    }
   }
 }
