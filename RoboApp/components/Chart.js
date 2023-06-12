@@ -9,7 +9,7 @@ export default function Chart() {
   return (
     <View style={styles.container}>
       <Text style={styles.titleChart}>Obstacles detected per lap</Text>
-      <VictoryPie
+      <VictoryPie style={styles.chart}
         innerRadius={100}
         colorScale={["#98FB98", "#088F8F", "#00563B", "#00FF00", "#50C878"]}
         data={chartData}
@@ -28,7 +28,6 @@ export default function Chart() {
 const styles = StyleSheet.create({
 
   container: {
-    height: '100%',
     marginBottom: 30,
     marginRight: 30,
   },
@@ -37,7 +36,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 25,
     fontWeight: 'bold',
-    marginBottom: 20
+    marginBottom: 20,
+  },
+  chart:{
+    flex: 1,
+    width: "100%"
   }
 
 })

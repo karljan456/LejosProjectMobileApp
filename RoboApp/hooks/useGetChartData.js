@@ -30,6 +30,12 @@ export const useGetChartData = (url, method = "GET") => {
 
         xhttp.send();
 
+        return () => {
+
+            xhttp.abort();
+
+        };
+
     }, [url])
 
     return chartData;

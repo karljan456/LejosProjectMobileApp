@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "RoboApp",
-    "slug": "RoboApp",
+    "slug": "roboapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "76fb5302-1409-4132-bb1e-113e2b3b97ad"
+      }
+    },
+    "owner": "edv11n"
   }
 }

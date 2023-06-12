@@ -21,9 +21,8 @@ export default function Statistics() {
 
 const styles = StyleSheet.create({
     statisctics: {
-        height: '100%',
         width: '100%',
-        marginTop: 10
+        marginTop: 10,
     },
     title: {
         textAlign: 'center',

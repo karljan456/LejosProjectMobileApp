@@ -53,6 +53,7 @@ export default function Selector() {
 const styles = StyleSheet.create({
     selector: {
         marginVertical: 20,
-        marginTop: '20%',
+        marginTop: '15%',
+        flex: 1
     }
-})
+});
