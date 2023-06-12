@@ -7,7 +7,7 @@ The app is developed with React Native framework, it consisits of
 3. Control Buttons: Stop the Program, Flash lights, Dance, Play random music, Pause the Program, Continue the Program.
 4. Statistics (how many times was the obstacle detected)
 
-Technologies used: React Native, Expo
+### Technologies used: React Native, Expo
 
 ## App Screenshots
 
